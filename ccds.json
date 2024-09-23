@@ -23,8 +23,6 @@
         "Pipfile"
     ],
     "pydata_packages": [
-        "none",
-        "basic",
         "monaidev"
     ],
     "open_source_license": ["No license file", "MIT", "BSD-3-Clause"],
