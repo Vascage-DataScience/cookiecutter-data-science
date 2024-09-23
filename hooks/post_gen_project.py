@@ -39,6 +39,7 @@ pip_only_packages = [
     "scipy",
     "torch",
     "torchvision",
+    "mkdocstrings-python",
 ]
 
 # Use the selected documentation package specified in the config,

@@ -1,3 +1,9 @@
+# Todo 
+- Setup a Datastorage server and add option
+- Setup a service for tracking and downloading the weight of the NN-Models and add option
+- Remove env options if necessary
+- Update license options
+
 # Cookiecutter Data Science
 
 _A logical, reasonably standardized but flexible project structure for doing and sharing data science work._
