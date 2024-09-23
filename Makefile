@@ -4,7 +4,7 @@
 ## GLOBALS
 
 PROJECT_NAME = cookiecutter-data-science
-PYTHON_VERSION = 3.10
+PYTHON_VERSION = 3.11
 PYTHON_INTERPRETER = python
 
 
