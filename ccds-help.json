@@ -199,6 +199,13 @@
                     "description": "Basic common data science packages.",
                     "more_information": ""
                 } 
+            },
+            {
+                "choice": "monaidev",
+                "help": {
+                    "description": "Basic common data science packages and the monai dev environment for developing",
+                    "more_information": ""
+                } 
             }
         ]
     },
