@@ -32,6 +32,13 @@ packages_to_install += monaidev
 pip_only_packages = [
     "awscli",
     "python-dotenv",
+    "holoscan",
+    "monai",
+    "monai-deploy-app-sdk",
+    "scikit-image",
+    "scipy",
+    "torch",
+    "torchvision",
 ]
 
 # Use the selected documentation package specified in the config,
