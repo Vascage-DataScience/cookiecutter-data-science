@@ -1,4 +1,10 @@
 site_name: {{ cookiecutter.project_name }}
+plugins:
+- mkdocstrings:
+    handlers:
+      python:
+        paths: [../]  # search packages above
+- search # search package
 # {% if cookiecutter.author_name %}
 site_author: {{ cookiecutter.author_name }}
 # {% endif %}
