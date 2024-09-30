@@ -4,7 +4,7 @@
 - Remove env options if necessary
 - Update license options
 - Unify logger setup ccds and monai-bundle
-- Splitting up readme for monai and none monai projects
+
 
 # Cookiecutter Data Science
 

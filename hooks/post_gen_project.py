@@ -32,6 +32,10 @@ packages_to_install += monaidev
 pip_only_packages = [
     "awscli",
     "python-dotenv",
+]
+
+# {% if cookiecutter.pydata_packages == "monaidev" %}
+pip_only_packages += [
     "holoscan",
     "monai",
     "monai-deploy-app-sdk",
@@ -41,6 +45,7 @@ pip_only_packages = [
     "torchvision",
     "mkdocstrings-python",
 ]
+# {% endif %}
 
 # Use the selected documentation package specified in the config,
 # or none if none selected
