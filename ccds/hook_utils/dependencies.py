@@ -14,6 +14,7 @@ basic = [
     "numpy",
     "pandas",
     "scikit-learn",
+    "mlflow",
 ]
 
 monaidev = [
@@ -21,6 +22,7 @@ monaidev = [
     "numpy",
     "pandas",
     "scikit-learn",
+    "mlflow",
 ]
 
 scaffold = [

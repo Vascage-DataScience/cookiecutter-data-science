@@ -31,7 +31,7 @@ packages_to_install += monaidev
 # track packages that are not available through conda
 pip_only_packages = [
     "awscli",
-    "python-dotenv"
+    "python-dotenv",
 ]
 
 # {% if cookiecutter.pydata_packages == "monaidev" %}
@@ -43,7 +43,7 @@ pip_only_packages += [
     "scipy",
     "torch",
     "torchvision",
-    "mkdocstrings-python"
+    "mkdocstrings-python",
 ]
 # {% endif %}
 
