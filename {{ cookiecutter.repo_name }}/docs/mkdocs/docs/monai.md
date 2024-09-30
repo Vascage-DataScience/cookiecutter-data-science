@@ -103,7 +103,7 @@ If everything worked as expected, we are now trying to add the workflow to the m
 				"input": [
 					{
 						"name": "env_MONAI_INPUTPATH",
-						"value": "{{ context.input.dicom }}"
+						"value": " context.input.dicom "
 					}
 				],
 				"output": [
@@ -132,7 +132,7 @@ If everything worked as expected, we are now trying to add the workflow to the m
 				"input": [
 					{
 						"name": "export-dicom",
-						"value": "{{ context.executions.brain.artifacts.env_MONAI_OUTPUTPATH }}",
+						"value": " context.executions.brain.artifacts.env_MONAI_OUTPUTPATH ",
 						"mandatory": true
 					}
 				],
