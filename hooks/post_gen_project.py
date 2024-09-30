@@ -31,7 +31,11 @@ packages_to_install += monaidev
 # track packages that are not available through conda
 pip_only_packages = [
     "awscli",
-    "python-dotenv",
+    "python-dotenv"
+]
+
+# {% if cookiecutter.pydata_packages == "monaidev" %}
+pip_only_packages += [
     "holoscan",
     "monai",
     "monai-deploy-app-sdk",
@@ -39,8 +43,9 @@ pip_only_packages = [
     "scipy",
     "torch",
     "torchvision",
-    "mkdocstrings-python",
+    "mkdocstrings-python"
 ]
+# {% endif %}
 
 # Use the selected documentation package specified in the config,
 # or none if none selected
