@@ -62,7 +62,6 @@
 # MONAI setup, configuration and deployability
 ## Deploy
 ### Overview
-![overview](docs/resources/overview.png)
 **Application:** An application represents a collection of computational tasks that together accomplish a meaningful goal in the healthcare domain. Typically, an app defines a workflow that reads medical imaging data from disk, processes it in one or more operators (some of which could be AI inference related), and produces output data. User implements an app by subclassing Application class. An app makes use of instances of Operators as stages in the application.
 
 **Graph:** The SDK provides a mechanism to define a directed acyclic graph (through Graph classes) which can be composed of operators. This acyclic property is important, as it prevents the framework from running into circular dependencies between operators. The graph consists of one or more vertices and edges, with each edge directed from one vertex to another, such that there is no way to start at any vertex and follow a consistently directed sequence of edges that eventually loops back to the same vertex again. Each vertex in the graph represents an Operator. The edge between two operators contains connectivity information.
