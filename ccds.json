@@ -23,6 +23,7 @@
         "Pipfile"
     ],
     "pydata_packages": [
+        "none",
         "basic",
         "monaidev"
     ],
