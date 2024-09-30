@@ -34,18 +34,17 @@ pip_only_packages = [
     "python-dotenv",
 ]
 
-# {% if cookiecutter.pydata_packages == "monaidev" %}
-pip_only_packages += [
-    "holoscan",
-    "monai",
-    "monai-deploy-app-sdk",
-    "scikit-image",
-    "scipy",
-    "torch",
-    "torchvision",
-    "mkdocstrings-python",
-]
-# {% endif %}
+# pip_only_packages += [
+#     "holoscan",
+#     "monai",
+#     "monai-deploy-app-sdk",
+#     "scikit-image",
+#     "scipy",
+#     "torch",
+#     "torchvision",
+#     "mkdocstrings-python",
+# ]
+
 
 # Use the selected documentation package specified in the config,
 # or none if none selected
