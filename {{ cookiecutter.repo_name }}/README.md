@@ -1,7 +1,7 @@
 # {{cookiecutter.project_name}}
 
 ## Datastorage
-If you are using the data-storage option, make sure you installed the monai client from [here]{https://min.io/docs/minio/linux/reference/minio-mc.html}
+If you are using the data-storage option, make sure you installed the monai client from [here](https://min.io/docs/minio/linux/reference/minio-mc.html).
 For Windows you can simply download the binary and link it in the PATH-Variable.
 Download for Windows:
 ```
