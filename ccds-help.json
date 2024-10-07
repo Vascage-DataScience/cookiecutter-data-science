@@ -58,7 +58,7 @@
             {
                 "choice": "s3",
                 "help": {
-                    "description": "Store data on Amazon S3.",
+                    "description": "Store data on MinIO S3.",
                     "more_information": "[Docs](https://docs.aws.amazon.com/s3/)"
                 },
                 "subfields": [
