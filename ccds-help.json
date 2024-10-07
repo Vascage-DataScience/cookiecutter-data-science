@@ -56,22 +56,6 @@
                 } 
             },
             {
-                "choice": "azure",
-                "help": {
-                    "description": "Store data on Azure Blob Storage.",
-                    "more_information": "[Docs](https://learn.microsoft.com/en-us/azure/storage/blobs/)"
-                },
-                "subfields": [
-                    {
-                        "field": "container",
-                        "help": {
-                            "description": "Name of the container on blob storage.",
-                            "more_information": "[Docs](https://learn.microsoft.com/en-us/azure/storage/blobs/blob-containers-portal)" 
-                        }
-                    }
-                ] 
-            },
-            {
                 "choice": "s3",
                 "help": {
                     "description": "Store data on Amazon S3.",
@@ -79,33 +63,24 @@
                 },
                 "subfields": [
                     {
-                        "field": "bucket",
+                        "field": "URI",
                         "help": {
-                            "description": "The name of the bucket to store data in; can also be a longer S3 path.",
+                            "description": "The uri of the server to store data in, including the port! http://{ip}:{port:9000}",
                             "more_information": "[Docs](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html#BasicsBucket)" 
                         }
                     },
                     {
-                        "field": "aws_profile",
+                        "field": "user",
                         "help": {
-                            "description": "The name of the profile to use for the aws CLI.",
+                            "description": "Your user for the monio website http://{ip:9001}",
                             "more_information": "[Docs](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html)"
                         }
-                    }
-                ] 
-            },
-            {
-                "choice": "gcs",
-                "help": {
-                    "description": "Store data to Google Cloud Storage",
-                    "more_information": "[Docs](https://cloud.google.com/storage/docs)"
-                },
-                "subfields": [
+                    },
                     {
-                        "field": "bucket",
+                        "field": "password",
                         "help": {
-                            "description": "The name of the bucket to store data in.",
-                            "more_information": "[Docs](https://cloud.google.com/storage/docs/buckets)"
+                            "description": "Your password for the monio website http://{ip:9001}",
+                            "more_information": "[Docs](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html)"
                         }
                     }
                 ] 
