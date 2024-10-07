@@ -49,6 +49,11 @@ format:
 initialize_sync:
 	{% if cookiecutter.dataset_storage.s3 -%}
 	mc alias set vascages3 {{ cookiecutter.dataset_storage.s3.URI }} {{ cookiecutter.dataset_storage.s3.user }} {{ cookiecutter.dataset_storage.s3.password }}
+	{% endif %}
+
+.PHONY: create_bucket
+create_bucket:
+	{% if cookiecutter.dataset_storage.s3 -%}
 	mc mb --with-versioning vascages3/{{ cookiecutter.project_name }}
 	{% endif %}
 

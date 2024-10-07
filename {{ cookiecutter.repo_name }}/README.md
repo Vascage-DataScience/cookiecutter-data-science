@@ -1,5 +1,26 @@
 # {{cookiecutter.project_name}}
 
+## Datastorage
+If you are using the data-storage option, make sure you installed the monai client from [here]{https://min.io/docs/minio/linux/reference/minio-mc.html}
+For Windows you can simply download the binary and link it in the PATH-Variable.
+Download for Windows:
+```
+https://dl.min.io/client/mc/release/windows-amd64/mc.exe
+```
+
+For Linux you can download the application via CURL
+```
+curl https://dl.min.io/client/mc/release/linux-amd64/mc \
+  --create-dirs \
+  -o $HOME/minio-binaries/mc
+
+chmod +x $HOME/minio-binaries/mc
+export PATH=$PATH:$HOME/minio-binaries/
+
+mc --help
+```
+
+
 <a target="_blank" href="https://cookiecutter-data-science.drivendata.org/">
     <img src="https://img.shields.io/badge/CCDS-Project%20template-328F97?logo=cookiecutter" />
 </a>
