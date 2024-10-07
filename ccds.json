@@ -7,9 +7,7 @@
     "python_version_number": "3.11",
     "dataset_storage": [
         {"none": "none"},
-        {"azure": {"container": "container-name"}},
-        {"s3": {"bucket": "bucket-name", "aws_profile": "default"}},
-        {"gcs": {"bucket": "bucket-name"}}
+        {"s3": {"URI": "http://10.113.74.49:9000", "user": "Your user!", "password": "Your S€cr€7p4$$w0rD!"}}
     ],
     "environment_manager": [
         "conda",

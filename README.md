@@ -1,7 +1,4 @@
 # Todo 
-- Setup a Datastorage server and add option
-- Setup a service for tracking and downloading the weight of the NN-Models and add option
-- Remove env options if necessary
 - Update license options
 - Unify logger setup ccds and monai-bundle
 
