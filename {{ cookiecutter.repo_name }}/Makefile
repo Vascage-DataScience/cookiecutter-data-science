@@ -65,6 +65,7 @@ sync_data_up:
 	{% if cookiecutter.dataset_storage.s3 -%}
 	mc cp --recursive data/ vascages3/{{ cookiecutter.project_name }}/
 	{% endif %}
+{% endif %}
 
 {% if cookiecutter.environment_manager != 'none' %}
 ## Set up python interpreter environment
