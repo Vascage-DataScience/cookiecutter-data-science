@@ -17,13 +17,13 @@ basic = [
     "mlflow",
 ]
 
-monaidev = [
-    "matplotlib",
-    "numpy",
-    "pandas",
-    "scikit-learn",
-    "mlflow",
-]
+# monaidev = [
+#     "matplotlib",
+#     "numpy",
+#     "pandas",
+#     "scikit-learn",
+#     "mlflow",
+# ]
 
 scaffold = [
     "typer",

@@ -5,7 +5,7 @@ from pathlib import Path
 # https://github.com/cookiecutter/cookiecutter/issues/824
 #   our workaround is to include these utility functions in the CCDS package
 from ccds.hook_utils.custom_config import write_custom_config
-from ccds.hook_utils.dependencies import basic, monaidev, packages, scaffold, write_dependencies
+from ccds.hook_utils.dependencies import basic, packages, scaffold, write_dependencies
 
 #
 #  TEMPLATIZED VARIABLES FILLED IN BY COOKIECUTTER
@@ -25,7 +25,7 @@ packages_to_install += basic
 # {% endif %}
 
 # {% if cookiecutter.pydata_packages == "monaidev" %}
-packages_to_install += monaidev
+# packages_to_install += monaidev
 # {% endif %}
 
 # track packages that are not available through conda
@@ -35,16 +35,16 @@ pip_only_packages = [
 ]
 
 # {% if cookiecutter.pydata_packages == "monaidev" %}
-pip_only_packages += [
-    "holoscan",
-    "monai",
-    "monai-deploy-app-sdk",
-    "scikit-image",
-    "scipy",
-    "torch",
-    "torchvision",
-    "mkdocstrings-python",
-]
+# pip_only_packages += [
+#     "holoscan",
+#     "monai",
+#     "monai-deploy-app-sdk",
+#     "scikit-image",
+#     "scipy",
+#     "torch",
+#     "torchvision",
+#     "mkdocstrings-python",
+# ]
 # {% endif %}
 
 # Use the selected documentation package specified in the config,

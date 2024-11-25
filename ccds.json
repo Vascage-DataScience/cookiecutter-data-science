@@ -22,8 +22,7 @@
     ],
     "pydata_packages": [
         "none",
-        "basic",
-        "monaidev"
+        "basic"
     ],
     "open_source_license": ["No license file", "MIT", "BSD-3-Clause"],
     "docs": ["mkdocs", "none"],
