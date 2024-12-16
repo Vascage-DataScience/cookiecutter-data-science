@@ -10,8 +10,8 @@
     "optional_packages_version": {
         "torchvision": "0.13.1"
     },
-    "name": "{{ cookiecutter.module_name }}",
-    "task": "{{ cookiecutter.module_name }}",
+    "name": "app",
+    "task": "app",
     "description": "",
     "authors": "",
     "copyright": "",

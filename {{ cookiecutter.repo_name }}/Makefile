@@ -34,14 +34,14 @@ clean:
 ## Lint using flake8 and black (use `make format` to do formatting)
 .PHONY: lint
 lint:
-	flake8 {{ cookiecutter.module_name }}
-	isort --check --diff --profile black {{ cookiecutter.module_name }}
-	black --check --config pyproject.toml {{ cookiecutter.module_name }}
+	flake8 app
+	isort --check --diff --profile black app
+	black --check --config pyproject.toml app
 
 ## Format source code with black
 .PHONY: format
 format:
-	black --config pyproject.toml {{ cookiecutter.module_name }}
+	black --config pyproject.toml app
 
 {% if not cookiecutter.dataset_storage.none %}
 
@@ -101,7 +101,7 @@ create_environment:
 ## Make Dataset
 .PHONY: data
 data: requirements
-	$(PYTHON_INTERPRETER) {{ cookiecutter.module_name }}/dataset.py
+	$(PYTHON_INTERPRETER) app/dataset.py
 {% endif %}
 
 #################################################################################
