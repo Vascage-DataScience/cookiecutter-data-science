@@ -26,14 +26,14 @@ requirements:
 
 {% if cookiecutter.dependency_file != 'none' %}
 ## Install Python Dependencies
-.PHONY: requirements
+.PHONY: prepare-monai
 prepare-monai:
 	{% if "requirements.txt" == cookiecutter.dependency_file -%}
 	cp requirements.txt ./app/requirements.txt
 	{% elif "environment.yml" == cookiecutter.dependency_file -%}
 	conda list -e > ./app/requirements.txt
 	{% endif %}
-	
+
 {% endif %}
 
 
