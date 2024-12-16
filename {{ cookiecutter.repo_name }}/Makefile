@@ -33,6 +33,7 @@ prepare-monai:
 	{% elif "environment.yml" == cookiecutter.dependency_file -%}
 	conda list -e > ./app/requirements.txt
 	{% endif %}
+	
 {% endif %}
 
 
