@@ -16,9 +16,9 @@ packages_to_install = copy(packages)
 
 # {% if cookiecutter.dataset_storage.s3 %}
 packages_to_install += ["awscli"]
-user = getpass.getpass("Please type in your username for monai: ")
+username = input("Please type in your username for monai: ")
 password = getpass.getpass("Please type in your password for monai: ")
-os.system("mc alias set vascages3 {{ cookiecutter.dataset_storage.s3.URI }} "+user+" "+password)
+os.system("mc alias set vascages3 {{ cookiecutter.dataset_storage.s3.URI }} "+username+" "+password)
 # {% endif %} #
 
 # {% if cookiecutter.include_code_scaffold == "Yes" %}
