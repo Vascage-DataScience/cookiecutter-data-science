@@ -24,6 +24,18 @@ requirements:
 	{% endif %}
 {% endif %}
 
+{% if cookiecutter.dependency_file != 'none' %}
+## Install Python Dependencies
+.PHONY: prepare-monai
+prepare-monai:
+	{% if "requirements.txt" == cookiecutter.dependency_file -%}
+	cp requirements.txt ./app/requirements.txt
+	{% elif "environment.yml" == cookiecutter.dependency_file -%}
+	conda list -e > ./app/requirements.txt
+	{% endif %}
+
+{% endif %}
+
 
 ## Delete all compiled Python files
 .PHONY: clean
@@ -34,22 +46,16 @@ clean:
 ## Lint using flake8 and black (use `make format` to do formatting)
 .PHONY: lint
 lint:
-	flake8 {{ cookiecutter.module_name }}
-	isort --check --diff --profile black {{ cookiecutter.module_name }}
-	black --check --config pyproject.toml {{ cookiecutter.module_name }}
+	flake8 app
+	isort --check --diff --profile black app
+	black --check --config pyproject.toml app
 
 ## Format source code with black
 .PHONY: format
 format:
-	black --config pyproject.toml {{ cookiecutter.module_name }}
+	black --config pyproject.toml app
 
 {% if not cookiecutter.dataset_storage.none %}
-
-.PHONY: initialize_sync
-initialize_sync:
-	{% if cookiecutter.dataset_storage.s3 -%}
-	mc alias set vascages3 {{ cookiecutter.dataset_storage.s3.URI }} {{ cookiecutter.dataset_storage.s3.user }} {{ cookiecutter.dataset_storage.s3.password }}
-	{% endif %}
 
 .PHONY: create_bucket
 create_bucket:
@@ -101,7 +107,7 @@ create_environment:
 ## Make Dataset
 .PHONY: data
 data: requirements
-	$(PYTHON_INTERPRETER) {{ cookiecutter.module_name }}/dataset.py
+	$(PYTHON_INTERPRETER) app/dataset.py
 {% endif %}
 
 #################################################################################
