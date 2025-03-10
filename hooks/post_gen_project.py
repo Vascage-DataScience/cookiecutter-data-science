@@ -2,6 +2,7 @@ import shutil
 import os
 from copy import copy
 from pathlib import Path
+import getpass
 
 # https://github.com/cookiecutter/cookiecutter/issues/824
 #   our workaround is to include these utility functions in the CCDS package
@@ -15,7 +16,9 @@ packages_to_install = copy(packages)
 
 # {% if cookiecutter.dataset_storage.s3 %}
 packages_to_install += ["awscli"]
-os.system("mc alias set vascages3 {{ cookiecutter.dataset_storage.s3.URI }}")
+user = getpass.getpass("Please type in your username for monai: ")
+password = getpass.getpass("Please type in your password for monai: ")
+os.system("mc alias set vascages3 {{ cookiecutter.dataset_storage.s3.URI }} "+user+" "+password)
 # {% endif %} #
 
 # {% if cookiecutter.include_code_scaffold == "Yes" %}
