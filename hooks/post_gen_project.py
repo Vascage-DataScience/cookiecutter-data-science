@@ -1,4 +1,5 @@
 import shutil
+import os
 from copy import copy
 from pathlib import Path
 
@@ -14,6 +15,7 @@ packages_to_install = copy(packages)
 
 # {% if cookiecutter.dataset_storage.s3 %}
 packages_to_install += ["awscli"]
+os.system("mc alias set vascages3 {{ cookiecutter.dataset_storage.s3.URI }} {{ cookiecutter.dataset_storage.s3.user }} {{ cookiecutter.dataset_storage.s3.password }}")
 # {% endif %} #
 
 # {% if cookiecutter.include_code_scaffold == "Yes" %}
