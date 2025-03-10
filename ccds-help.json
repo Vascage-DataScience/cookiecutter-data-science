@@ -68,20 +68,6 @@
                             "description": "The uri of the server to store data in, including the port! http://{ip}:{port:9000}",
                             "more_information": "[Docs](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html#BasicsBucket)" 
                         }
-                    },
-                    {
-                        "field": "user",
-                        "help": {
-                            "description": "Your user for the monio website http://{ip:9001}",
-                            "more_information": "[Docs](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html)"
-                        }
-                    },
-                    {
-                        "field": "password",
-                        "help": {
-                            "description": "Your password for the monio website http://{ip:9001}",
-                            "more_information": "[Docs](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html)"
-                        }
                     }
                 ] 
             }

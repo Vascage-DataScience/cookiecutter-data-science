@@ -7,7 +7,7 @@
     "python_version_number": "3.11",
     "dataset_storage": [
         {"none": "none"},
-        {"s3": {"URI": "http://192.168.1.35:9000", "user": "Your user!", "__password": "Your S€cr€7p4$$w0rD!"}}
+        {"s3": {"URI": "http://192.168.1.35:9000"}}
     ],
     "environment_manager": [
         "conda",
