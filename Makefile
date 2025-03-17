@@ -24,15 +24,12 @@ create_environment:
 requirements:
 	$(PYTHON_INTERPRETER) -m pip install -r dev-requirements.txt
 
-## Format the code using isort and black
+## Format the code using ruff
 format:
-	isort --profile black ccds hooks tests docs/scripts
-	black ccds hooks tests docs/scripts
+	ruff format ccds hooks tests docs/scripts --config ruff.toml
 
 lint:
-	flake8 ccds hooks tests docs/scripts
-	isort --check --profile black ccds hooks tests docs/scripts
-	black --check ccds hooks tests docs/scripts
+	ruff check ccds hooks tests docs/scripts --config ruff.toml
 
 
 ###     DOCS

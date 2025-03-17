@@ -48,7 +48,7 @@ mc --help
 │                         `1.0-jqp-initial-data-exploration`.
 │
 ├── pyproject.toml     <- Project configuration file with package metadata for 
-│                         app and configuration for tools like black
+│                         app and configuration for tools like ruff
 │
 ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
 │
@@ -58,7 +58,7 @@ mc --help
 ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
 │                         generated with `pip freeze > requirements.txt`
 │
-├── setup.cfg          <- Configuration file for flake8
+├── ruff.toml          <- Configuration file for ruff
 │
 └── app   <- Source code for use in this project.
     │

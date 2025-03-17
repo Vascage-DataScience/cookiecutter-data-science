@@ -1,6 +1,5 @@
 packages = [
-    "black",
-    "flake8",
+    "ruff",
     "isort",
     "pip",
     "python-dotenv",
