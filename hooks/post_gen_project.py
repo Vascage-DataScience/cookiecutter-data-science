@@ -76,7 +76,7 @@ write_dependencies(
     packages_to_install,
     pip_only_packages,
     repo_name="{{ cookiecutter.repo_name }}",
-    module_name="app",
+    module_name="{{ cookiecutter.module_name }}",
     python_version="{{ cookiecutter.python_version_number }}",
 )
 
