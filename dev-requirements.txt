@@ -1,11 +1,9 @@
 -e .
 
 ansi2html
-black
 build
 chardet
-flake8
-isort
+ruff
 mkdocs
 mkdocs-material
 mkdocs-gen-files

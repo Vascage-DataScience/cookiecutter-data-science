@@ -57,7 +57,7 @@ The directory structure of your new project will look something like this (depen
 │                         `1.0-jqp-initial-data-exploration`.
 │
 ├── pyproject.toml     <- Project configuration file with package metadata for 
-│                         app and configuration for tools like black
+│                         app and configuration for tools like ruff
 │
 ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
 │
@@ -67,7 +67,7 @@ The directory structure of your new project will look something like this (depen
 ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
 │                         generated with `pip freeze > requirements.txt`
 │
-├── setup.cfg          <- Configuration file for flake8
+├── ruff.toml          <- Configuration file for ruff
 │
 └── app   <- Source code for use in this project.
     │

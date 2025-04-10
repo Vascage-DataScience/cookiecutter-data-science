@@ -3,6 +3,7 @@
 #################################################################################
 
 PROJECT_NAME = {{ cookiecutter.repo_name }}
+MODULE_NAME = {{ cookiecutter.module_name }}
 PYTHON_VERSION = {{ cookiecutter.python_version_number }}
 PYTHON_INTERPRETER = python
 
@@ -29,9 +30,9 @@ requirements:
 .PHONY: prepare-monai
 prepare-monai:
 	{% if "requirements.txt" == cookiecutter.dependency_file -%}
-	cp requirements.txt ./app/requirements.txt
+	cp requirements.txt ./$(MODULE_NAME)/requirements.txt
 	{% elif "environment.yml" == cookiecutter.dependency_file -%}
-	conda list -e > ./app/requirements.txt
+	conda list -e > ./$(MODULE_NAME)/requirements.txt
 	{% endif %}
 
 {% endif %}
@@ -43,17 +44,15 @@ clean:
 	find . -type f -name "*.py[co]" -delete
 	find . -type d -name "__pycache__" -delete
 
-## Lint using flake8 and black (use `make format` to do formatting)
+## Lint using ruff (use `make format` to do formatting)
 .PHONY: lint
 lint:
-	flake8 app
-	isort --check --diff --profile black app
-	black --check --config pyproject.toml app
+	ruff check $(MODULE_NAME) --config pyproject.toml
 
-## Format source code with black
+## Format source code with ruff
 .PHONY: format
 format:
-	black --config pyproject.toml app
+	ruff format $(MODULE_NAME) --config pyproject.toml
 
 {% if not cookiecutter.dataset_storage.none %}
 
@@ -107,7 +106,7 @@ create_environment:
 ## Make Dataset
 .PHONY: data
 data: requirements
-	$(PYTHON_INTERPRETER) app/dataset.py
+	$(PYTHON_INTERPRETER) $(MODULE_NAME)/dataset.py
 {% endif %}
 
 #################################################################################

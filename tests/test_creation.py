@@ -100,7 +100,7 @@ def verify_files(root, config):
         "Makefile",
         "README.md",
         "pyproject.toml",
-        "setup.cfg",
+        "ruff.toml",
         ".env",
         ".gitignore",
         "data/external/.gitkeep",

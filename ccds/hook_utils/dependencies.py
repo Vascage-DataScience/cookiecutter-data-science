@@ -1,7 +1,5 @@
 packages = [
-    "black",
-    "flake8",
-    "isort",
+    "ruff",
     "pip",
     "python-dotenv",
 ]
@@ -11,6 +9,7 @@ basic = [
     "jupyterlab",
     "matplotlib",
     "notebook",
+    "fastcore",
     "numpy",
     "pandas",
     "scikit-learn",
